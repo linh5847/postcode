@@ -4,7 +4,7 @@ PreRequisites:-
 
 Python 3.6 or later
 
-Pip3 
+Pip3
 
 Install
 
@@ -18,8 +18,15 @@ pipenv install djangorestframework
 
 pipenv install django
 
+pipenv install whitenoise
+
 pipenv shell
 
 python manage.py runserver
 
 This app can run under localhost only on the Linux machine with internet browser to see i.e Cambridge CB3 0FA. It also enable users to add more location and postcode.
+
+http://localhost:8000/
+
+For a new user signup: http://localhost:8000/accounts/signup/
+

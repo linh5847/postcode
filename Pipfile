@@ -6,12 +6,8 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
-djangorestframework-jwt = "*"
-djangorestframework = "*"
-markdown = "*"
-django-filter = "*"
-freeze = "*"
 django = "*"
+whitenoise = "*"
 
 [requires]
 python_version = "3.6"

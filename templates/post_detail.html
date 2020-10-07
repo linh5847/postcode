@@ -4,9 +4,8 @@
 
 {% block content %}
     <div class="post-entry">
-        <h2>{{ post.area }}</h2>
-        <p>{{ post.postcode }}</p>
+        <h2>{{ object.area }} : {{ object.postcode }} </h2>
     </div>
-    <p><a href="{% url 'post_edit' post.pk %}">+ Edit Postcode</a></p>
-    <p><a href="{% url 'post_delete' post.pk %}">+ Delete Postcode</a></p>
+    <p><a href="{% url 'post_edit' object.pk %}">+ Edit Postcode</a></p>
+    <p><a href="{% url 'post_delete' object.pk %}">+ Delete Postcode</a></p>
 {% endblock content %}

@@ -5,8 +5,7 @@
 {% block content %}
     {% for post in object_list %}
         <div class="post-entry">
-            <h2><a href="{% url 'post_detail' post.pk %}">{{ post.area }}</a></h2>
-            <p>{{ post.postcode }}</p>
+            <h2><a href="{% url 'post_detail' post.pk %}">{{ post.area }} : {{ post.postcode }}</a></h2>
         </div>
     {% endfor %}
 {% endblock content %}

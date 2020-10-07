@@ -1,0 +1,13 @@
+<!-- templates/search_results.html -->
+
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Search Results</h1>
+    <ul>
+        {% for code in object_list %}
+            <li>{{ code.area }} : {{ code.postcode }}</li>
+        {% endfor %}
+    </ul>
+
+{% endblock content %}

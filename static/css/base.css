@@ -17,6 +17,10 @@ header h1 a {
 }
 
 .nav-left {
+    margin-right: auto ;
+}
+
+.nav-middle {
     margin-right: auto;
 }
 

@@ -4,7 +4,7 @@
 
 <html>
     <head>
-        <title>Django blog</title>
+        <title>Postcode</title>
         <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400" rel="\Stylesheet">
         <link rel="Stylesheet" href="{% static 'css/base.css' %}">
     </head>
@@ -14,16 +14,21 @@
                 <div class="nav-left">
                     <h1><a href="/">Postcode</a></h1>
                 </div>
+                <div class="nav-middle">
+                    <form action="{% url 'search_results' %}" method="get">{% csrf_token %}
+                        <input name="q" type="text" placeholder="Search...">
+                    </form>
+                </div>
                 <div class="nav-right">
                     <a href="{% url 'post_new' %}">+ New Postcode</a>
                 </div>
             </header>
             {% if user.is_authenticated %}
-            <p>Hi {{ user.username }}</p>
-            <p><a href="{% url 'logout' %}">logout</a></p>
+                <p>Hi {{ user.username }}!</p>
+                <p><a href="{% url 'logout' %}">logout</a></p>
             {% else %}
-            <p>You are not logged in.</p>
-            <a href="{% url 'login' %}">login</a>
+                <p>You are not logged in.</p>
+                <a href="{% url 'login' %}">login</a>
             {% endif %}
             {% block content %}
             {% endblock content %}
